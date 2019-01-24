@@ -6,7 +6,7 @@ function displayTable() {
     let xhr = new XMLHttpRequest();
     xhr.open("GET", "http://localhost:8888/webservice/cursus_service.php", true);
     xhr.responseType = "json";
-    console.log(xhr.response);
+
     xhr.onload = function () {
         let container = document.getElementById("table-container");
         if (xhr.status === 200) {

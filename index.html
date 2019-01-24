@@ -1,13 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <title>FORMATION TORTUE NINJA</title>
     <script src="js/script.js"></script>
 </head>
+<div class="sticky-top ">
+<nav class="navbar navbar-dark bg-dark">
+    <span class="navbar-brand mb-0 h1">FORMATION TORTUE NINJA</span>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCursusModal">
+       ADD CURSUS
+    </button>
+</nav>
+</div>
 <body>
+
 <div id="table-container"></div>
+
+<div class="modal fade" id="addCursusModal" tabindex="-1" role="dialog" aria-labelledby="cursusModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cursusModalLabel">Ajouter Cursus</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form>
+            <div class="modal-body">
+
+                    <div class="form-group">
+                        <label for="titre">TITRE CURSUS</label>
+                        <input type="text" class="form-control" id="titre" placeholder="entrez titre">
+                    </div>
+                    <div class="form-group">
+                        <label for="niveau">NIVEAU DU CURSUS</label>
+                        <input type="text" class="form-control" id="niveau" placeholder="entrez le niveau">
+                    </div>
+                <div class="form-group">
+                    <h6>COURS ARMES</h6>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input"   name="arme" type="radio" value="KATANA" id="katana">
+                        <label class="form-check-label" for="katana">
+                            KATANA
+                        </label>
+                        <input class="form-check-input"  name="arme" type="radio" value="BATON" id="baton">
+                        <label class="form-check-label" for="baton">
+                            BATON
+                        </label>
+
+                        <input class="form-check-input" name="arme" type="radio" value="FOURCHES" id="fourche">
+                        <label class="form-check-label" for="fourche">
+                            FOURCHES
+                        </label>
+                        <input class="form-check-input" name="arme" type="radio" value="NUNCHAKU" id="nunchaku">
+                        <label class="form-check-label" for="nunchaku">
+                            NUNCHAKU
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary"  >
+                    SAVE CURSUS
+                </button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
